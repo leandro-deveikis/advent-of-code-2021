@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	/* example_input := []int{199, 200, 208, 210, 200, 207, 240, 269, 260, 263}*/
 	// first part - increase count
 	fmt.Printf("The example to the first part is: %d \n", countIncreases(Challenge_input))
 	// second part - three measurement sliding window
@@ -23,14 +22,14 @@ func countIncreases(input []int) int {
 	// be compared with itself, so it will not count as an
 	// increase
 	var previous int = input[0]
-	increaseCount := 0
+	increase_count := 0
 	for _, i := range input {
 		if i > previous {
-			increaseCount++
+			increase_count++
 		}
 		previous = i
 	}
-	return increaseCount
+	return increase_count
 }
 
 func buildWindows(challenge_input []int) []int {
