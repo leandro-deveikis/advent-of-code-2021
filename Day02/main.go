@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+// https://adventofcode.com/2021/day/2
+
 type Position struct {
 	horizontal int
 	depth      int

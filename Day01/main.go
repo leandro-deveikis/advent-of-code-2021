@@ -8,7 +8,7 @@ import (
 
 func main() {
 	// first part - increase count
-	fmt.Printf("The example to the first part is: %d \n", countIncreases(Challenge_input))
+	fmt.Printf("The answer to the first part is: %d \n", countIncreases(Challenge_input))
 	// second part - three measurement sliding window
 	fmt.Printf("The answer to the second part is: %d \n", countIncreases(buildWindows(Challenge_input)))
 }
