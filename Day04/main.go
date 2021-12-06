@@ -10,6 +10,7 @@ import (
 
 type Board struct {
 	numbers [][]Field
+	won     bool
 }
 
 type Field struct {
@@ -25,17 +26,20 @@ func main() {
 	// fmt.Printf("Numbers: %d \n", numbers)
 	// fmt.Printf("Boards: %+v \n", boards)
 
-	result := findResult(numbers, boards)
-	fmt.Printf("result: %d \n", result)
+	resultPart1, resultPart2 := findResults(numbers, boards)
+	fmt.Printf("PART 1 result: %d \n", resultPart1)
+	fmt.Printf("PART 2 result: %d \n", resultPart2)
 }
 
-func findResult(numbers []int, boards []*Board) int {
+func findResults(numbers []int, boards []*Board) (int, int) {
+	resultPart1, resultPart2 := 0, 0
+
 	for _, n := range numbers {
 		for _, b := range boards {
 			//check if number is present in any board
 			for i := 0; i < 5; i++ {
 				for j := 0; j < 5; j++ {
-					if b.numbers[i][j].value == n {
+					if b.numbers[i][j].value == n && !b.won {
 						b.numbers[i][j].marked = true
 						// checking if line is completed
 						lineCompleted := true
@@ -43,7 +47,8 @@ func findResult(numbers []int, boards []*Board) int {
 							lineCompleted = lineCompleted && b.numbers[i][k].marked
 						}
 						if lineCompleted {
-							return calculateSumOfBoard(b) * n
+							resultPart1, resultPart2 = calculateResult(b, n, resultPart1)
+							b.won = true
 						}
 						// checking if collumn is completed
 						colCompleted := true
@@ -51,14 +56,23 @@ func findResult(numbers []int, boards []*Board) int {
 							colCompleted = colCompleted && b.numbers[k][j].marked
 						}
 						if colCompleted {
-							return calculateSumOfBoard(b) * n
+							resultPart1, resultPart2 = calculateResult(b, n, resultPart1)
+							b.won = true
 						}
 					}
 				}
 			}
 		}
 	}
-	return 0
+	return resultPart1, resultPart2
+}
+
+func calculateResult(b *Board, n int, resultPart1 int) (int, int) {
+	r := calculateSumOfBoard(b) * n
+	if resultPart1 == 0 {
+		resultPart1 = r
+	}
+	return resultPart1, r
 }
 
 func calculateSumOfBoard(b *Board) int {
