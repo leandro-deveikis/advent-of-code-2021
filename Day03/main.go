@@ -101,11 +101,11 @@ func calculateGamma(input []uint, length int) uint {
 
 func calculateOxigen(input []uint, length int) uint {
 	filteredInput := input
-	fmt.Printf("input=%b \n", input)
+	// fmt.Printf("input=%b \n", input)
 	for i := length - 1; i >= 0; i-- {
 		mostCommon := getMostCommonBit(i, filteredInput)
 		filteredInput = filterInput(filteredInput, mostCommon, i)
-		fmt.Printf("most common=%b filtered=%b \n", mostCommon, filteredInput)
+		// fmt.Printf("most common=%b filtered=%b \n", mostCommon, filteredInput)
 		if len(filteredInput) == 1 {
 			break
 		}
@@ -115,11 +115,11 @@ func calculateOxigen(input []uint, length int) uint {
 
 func calculateCO2(input []uint, length int) uint {
 	filteredInput := input
-	fmt.Printf("input=%b \n", input)
+	// fmt.Printf("input=%b \n", input)
 	for i := length - 1; i >= 0; i-- {
 		lessCommon := getLessCommonBit(i, filteredInput)
 		filteredInput = filterInput(filteredInput, lessCommon, i)
-		fmt.Printf("less common=%b filtered=%b \n", lessCommon, filteredInput)
+		// fmt.Printf("less common=%b filtered=%b \n", lessCommon, filteredInput)
 		if len(filteredInput) == 1 {
 			break
 		}
