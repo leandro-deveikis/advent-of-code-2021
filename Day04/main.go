@@ -22,14 +22,14 @@ type Field struct {
 var Input string = "./Day04/input"
 
 func main() {
-	println("--- Day 04: ")
+	println("* DAY 04: ")
 	numbers, boards := readInput(Input)
 	// fmt.Printf("Numbers: %d \n", numbers)
 	// fmt.Printf("Boards: %+v \n", boards)
 
 	resultPart1, resultPart2 := findResults(numbers, boards)
-	fmt.Printf("PART 1 result: %d \n", resultPart1)
-	fmt.Printf("PART 2 result: %d \n", resultPart2)
+	fmt.Printf("--- PART 1 result: %d \n", resultPart1)
+	fmt.Printf("--- PART 2 result: %d \n", resultPart2)
 }
 
 func findResults(numbers []int, boards []*Board) (int, int) {

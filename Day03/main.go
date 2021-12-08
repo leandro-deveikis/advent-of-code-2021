@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	println("--- Day 03: ")
+	println("* DAY 03: ")
 	input := Challenge_input
 	length := getLengthRequired(input)
 
@@ -15,17 +15,17 @@ func main() {
 	epsilon := calculateEpsilon(gamma, length)
 
 	resultPart1 := gamma * epsilon
-	fmt.Printf("PART 1 - Gamma result:   binary=%b  decimal=%d \n", gamma, gamma)
-	fmt.Printf("PART 1 - Epsilon result: binary=%b  decimal=%d \n", epsilon, epsilon)
-	fmt.Printf("PART 1 - Final result:   binary=%b  decimal=%d \n", resultPart1, resultPart1)
+	fmt.Printf("--- PART 1 - Gamma result:   binary=%b  decimal=%d \n", gamma, gamma)
+	fmt.Printf("--- PART 1 - Epsilon result: binary=%b  decimal=%d \n", epsilon, epsilon)
+	fmt.Printf("--- PART 1 - Final result:   binary=%b  decimal=%d \n", resultPart1, resultPart1)
 
 	/****** PART 2 ******/
 	oxigen := calculateOxigen(input, length)
 	co2 := calculateCO2(input, length)
 	resultPart2 := oxigen * co2
-	fmt.Printf("PART 2 - oxigen binary=%b  decimal=%d \n", oxigen, oxigen)
-	fmt.Printf("PART 2 - oxigen binary=%b  decimal=%d \n", co2, co2)
-	fmt.Printf("PART 2 - Final result: binary=%b  decimal=%d \n", resultPart2, resultPart2)
+	fmt.Printf("--- PART 2 - oxigen binary=%b  decimal=%d \n", oxigen, oxigen)
+	fmt.Printf("--- PART 2 - oxigen binary=%b  decimal=%d \n", co2, co2)
+	fmt.Printf("--- PART 2 - Final result: binary=%b  decimal=%d \n", resultPart2, resultPart2)
 }
 
 func getLengthRequired(input []uint) int {

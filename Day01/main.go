@@ -7,15 +7,11 @@ import (
 )
 
 func main() {
-	Day01Challenge()
-}
-
-func Day01Challenge() {
-	println("--- Day 01: ")
+	println("* DAY 01: ")
 	// first part - increase count
-	fmt.Printf("The answer to the first part is: %d \n", countIncreases(Challenge_input))
+	fmt.Printf("--- PART 1 Result: %d \n", countIncreases(Challenge_input))
 	// second part - three measurement sliding window
-	fmt.Printf("The answer to the second part is: %d \n", countIncreases(buildWindows(Challenge_input)))
+	fmt.Printf("--- PART 2 Result: %d \n", countIncreases(buildWindows(Challenge_input)))
 }
 
 func countIncreases(input []int) int {

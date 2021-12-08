@@ -13,10 +13,10 @@ import (
 var Input string = "./Day08/input"
 
 func main() {
-	println("--- Day 08: ")
+	println("* DAY 08: ")
 
 	totalPart1 := calculatePart1(Input)
-	fmt.Printf("Total part 1: %v\n", totalPart1)
+	fmt.Printf("--- PART 1 Result: %v\n", totalPart1)
 
 	// Rules:
 	// * 1 -> only with 2 digits
@@ -33,7 +33,7 @@ func main() {
 	// warning: wires and digit are unsorted, should be sorted by characters to be compared
 	lines := readInput(Input)
 	totalPart2 := getTotal(lines)
-	fmt.Printf("Total part 2: %v\n", totalPart2)
+	fmt.Printf("--- PART 2 Result: %v\n", totalPart2)
 }
 
 //--------------------------------//

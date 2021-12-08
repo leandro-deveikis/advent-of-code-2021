@@ -17,7 +17,7 @@ type Line struct {
 var Input string = "./Day05/input"
 
 func main() {
-	println("--- Day 05: ")
+	println("* DAY 05: ")
 	lines := readInput(Input)
 	// fmt.Printf("Lines %+v \n:", lines)
 	filteredLines := filterOnlyEqualLines(lines)
@@ -25,14 +25,14 @@ func main() {
 	diagramPart1 := buildDiagram(filteredLines, maxX, maxY)
 	// fmt.Printf("Result  %+v \n:", diagram)
 	resultPart1 := getCountOfDangerousSteps(diagramPart1)
-	fmt.Printf("Result part 1: %d \n", resultPart1)
+	fmt.Printf("--- PART 1 Result: %d \n", resultPart1)
 
 	//PART 2
 	maxX2, maxY2 := gerMaxXandY(lines)
 	diagramPart2 := buildDiagram(lines, maxX2, maxY2)
 	//fmt.Printf("Result  %+v \n:", diagramPart2)
 	resultPart2 := getCountOfDangerousSteps(diagramPart2)
-	fmt.Printf("Result part 2: %d \n", resultPart2)
+	fmt.Printf("--- PART 2 Result: %d \n", resultPart2)
 }
 
 func getCountOfDangerousSteps(diagram [][]int) int {
