@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	println("--- Day 03: ")
 	input := Challenge_input
 	length := getLengthRequired(input)
 

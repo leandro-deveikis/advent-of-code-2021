@@ -14,9 +14,10 @@ type Line struct {
 }
 
 // the file to read
-var Input string = "./input"
+var Input string = "./Day05/input"
 
 func main() {
+	println("--- Day 05: ")
 	lines := readInput(Input)
 	// fmt.Printf("Lines %+v \n:", lines)
 	filteredLines := filterOnlyEqualLines(lines)

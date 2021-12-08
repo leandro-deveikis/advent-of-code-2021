@@ -19,9 +19,10 @@ type Field struct {
 }
 
 // the file to read
-var Input string = "./input"
+var Input string = "./Day04/input"
 
 func main() {
+	println("--- Day 04: ")
 	numbers, boards := readInput(Input)
 	// fmt.Printf("Numbers: %d \n", numbers)
 	// fmt.Printf("Boards: %+v \n", boards)

@@ -20,6 +20,7 @@ type Position2 struct {
 }
 
 func main() {
+	println("--- Day 02: ")
 	/**** PART 1 ****/
 	resultPart1 := calculatePosition_part1(Challenge_input)
 	fmt.Printf("PART 1 - Result position:  %+v \n", resultPart1)
