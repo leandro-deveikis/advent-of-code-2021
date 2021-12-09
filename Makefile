@@ -14,3 +14,5 @@ run-all:
 	@go run ./Day07/main.go 
 	@echo
 	@go run ./Day08/main.go 
+	@echo
+	@go run ./Day09/main.go

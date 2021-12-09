@@ -31,8 +31,7 @@ func main() {
 	// * 0 -> 6 digits and has the same as 1
 
 	// warning: wires and digit are unsorted, should be sorted by characters to be compared
-	lines := readInput(Input)
-	totalPart2 := getTotal(lines)
+	totalPart2 := calculatePart2(Input)
 	fmt.Printf("--- PART 2 Result: %v\n", totalPart2)
 }
 
@@ -64,6 +63,11 @@ func calculatePart1(Input string) int {
 //--------------------------------//
 //------------ PART 2 ------------//
 //--------------------------------//
+
+func calculatePart2(input string) int {
+	return getTotal(readInput(input))
+}
+
 func readInput(Input string) []string {
 	dat, err := os.Open(Input)
 	check(err)
