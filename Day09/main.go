@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var input string = "./input"
+var input string = "./Day09/input"
 
 type LowPoint struct {
 	pos Position
